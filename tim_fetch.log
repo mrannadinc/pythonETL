@@ -1,0 +1,43 @@
+2021-02-26 17:59:52,944 - WARNING - Started whole process
+2021-02-26 18:05:15,069 - WARNING - Started whole process
+2021-02-26 18:08:23,026 - WARNING - Database insert completed with(time) : 0.19206595420837402
+2021-02-26 18:08:23,027 - WARNING - All process completed. 
+2021-02-26 20:11:37,769 - WARNING - Started whole process
+2021-02-26 20:14:45,273 - WARNING - Database insert completed with(time) : 0.12433028221130371
+2021-02-26 20:14:45,274 - WARNING - All process completed. 
+2021-02-26 20:15:53,073 - WARNING - Started whole process
+2021-02-26 20:19:00,642 - WARNING - Database insert completed with(time) : 0.11680865287780762
+2021-02-26 20:19:00,648 - WARNING - All process completed. 
+2021-02-26 20:24:14,092 - WARNING - Started whole process
+2021-02-26 20:24:35,120 - ERROR - Could not connect to gateway 172.16.2.52:22 : Unable to connect to 172.16.2.52: [WinError 10060] Baðlanýlan uygun olarak belli bir süre içinde yanýt vermediðinden veya kurulan
+baðlantý baðlanýlan ana bilgisayar yanýt vermediðinden bir baðlantý kurulamadý
+2021-02-26 20:25:09,001 - WARNING - Started whole process
+2021-02-26 20:32:10,563 - WARNING - Started whole process
+2021-02-26 20:40:13,943 - WARNING - read_html_test.py:488: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_final.dropna(inplace=True)
+
+2021-02-26 20:40:13,946 - WARNING - read_html_test.py:490: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_final["yil"] = df_mn1[2]
+
+2021-02-26 20:40:13,947 - WARNING - read_html_test.py:491: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_final["ay"] = df_mn1[1]
+
+2021-02-26 20:40:13,954 - WARNING - C:\Users\Asus\.virtualenvs\pythonProject\pythonETL\lib\site-packages\pandas\core\frame.py:4174: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  errors=errors,
+
+2021-02-26 20:40:55,171 - WARNING - Database insert completed with(time) : 49.40363073348999
+2021-02-26 20:40:55,171 - WARNING - All process completed. 
