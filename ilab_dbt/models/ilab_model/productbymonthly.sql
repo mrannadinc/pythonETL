@@ -1,3 +1,5 @@
+{{config(materialized='table')}}
+
 with productbymonthly as (
 select 
 	o.product_id,
@@ -5,8 +7,6 @@ select
 	sum(o.total_amount) as total_amount_month,
 	count(o.order_id) as count_order
 from orders as o 
-inner join products as p
-	on o.product_id = p.product_id
 group by
 	o.product_id,
 	date_part('month', o.order_date)
