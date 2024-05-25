@@ -1,5 +1,8 @@
 # Astro Runtime includes the following pre-installed providers packages: https://docs.astronomer.io/astro/runtime-image-architecture#provider-packages
 
-apache-airflow-providers-google
-cosmos.providers
+apache-airflow-providers-postgres
+astronomer-cosmos
+pendulum
+apache-airflow
+cosmos
 astronomer-cosmos[dbt.all]
