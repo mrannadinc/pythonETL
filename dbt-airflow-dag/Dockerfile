@@ -5,7 +5,7 @@ WORKDIR "/usr/local/airflow"
 COPY dbt-requirements.txt ./
 RUN python -m pip install --upgrade pip && \
     python -m virtualenv dbt_venv && source dbt_venv/bin/activate && \
-    pip install --no-cache-dir -r dbt-requirements.txt && deactivate && \
+    pip install --no-cache-dir -r dbt-requirements.txt && pip install pytz && pip install dataset && deactivate && \
     python -m pip install psycopg2
 
 #RUN python -m venv dbt_venv && source dbt_venv/bin/activate && \
