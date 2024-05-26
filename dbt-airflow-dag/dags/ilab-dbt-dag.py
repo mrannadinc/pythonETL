@@ -4,22 +4,24 @@ from datetime import datetime
 from cosmos import DbtDag, ProjectConfig, ProfileConfig, ExecutionConfig
 from cosmos.profiles import PostgresUserPasswordProfileMapping
 
-profile_config = ProfileConfig(
-    profile_name="default",
-    target_name="dev",
-    profile_mapping=PostgresUserPasswordProfileMapping(
-        conn_id="postgres", 
-        profile_args={"database": "postgres", "schema": "postgres"},
-    )
-)
+from airflow import DAG
+from airflow.operators.empty import EmptyOperator
+from airflow.operators.bash_operator import BashOperator
 
-dbt_postgres_dag = DbtDag(
-    project_config=ProjectConfig("dags/dbt/ilab",),
-    operator_args={"install_deps": True},
-    profile_config=profile_config,
-    start_date=datetime(2024, 5, 26),
+with DAG(
+    dag_id="ilab_dbt",
+    start_date=datetime(2022, 11, 27),
     schedule="@daily",
-    dag_id='ilab_dbt'
-)
+) as dag:
+    
+    start = EmptyOperator(task_id="ingestion_workflow")
 
-dbt_postgres_dag
+    dbt_run = BashOperator(
+        task_id="dbt_run",
+        bash_command='dbt run',
+        dag=dag
+    )
+
+    end = EmptyOperator(task_id="some_extraction")
+
+    start >> dbt_run >> end
