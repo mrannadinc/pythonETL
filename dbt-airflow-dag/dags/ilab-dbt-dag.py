@@ -14,7 +14,7 @@ PATH_TO_DBT_VENV = "/usr/local/airflow/dbt_venv/bin/activate"
 with DAG(
     dag_id="ilab_dbt",
     start_date=datetime(2024, 5, 27),
-    schedule="@daily",
+    schedule="5 10 * * *",
 ) as dag:
     
     start = EmptyOperator(task_id="start")
